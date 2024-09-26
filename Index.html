@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web3 Wallet Connection</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS for styling -->
+    <title>Web3 Wallet Auto-Transfer</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS for styling -->
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script> <!-- Include Ethers.js -->
 </head>
 <body>
     <div class="container">
-        <h1>Web3 Wallet Connection</h1>
-        <button id="connectButton">Connect Wallet</button>
-        <button id="disconnectButton" style="display: none;">Disconnect Wallet</button>
-        <div id="walletAddress"></div>
-        <div id="statusMessage"></div>
-        <div id="loadingIndicator" class="loading">Processing your transactions...</div>
+        <div class="card">
+            <h1>Web3 Wallet Connection</h1>
+            <button id="connectButton">Connect Wallet</button>
+            <button id="disconnectButton" style="display: none;">Disconnect Wallet</button>
+            <div id="walletAddress" class="status"></div>
+            <div id="statusMessage" class="status"></div>
+            <div id="loadingIndicator" class="loading">Processing your transactions...</div>
+        </div>
     </div>
 
     <script src="script.js"></script>
